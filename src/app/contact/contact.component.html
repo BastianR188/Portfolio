@@ -1,0 +1,151 @@
+<div class="contact-main-container" id="contact">
+    <img
+      class="contact-shadow-bottom"
+      src="/assets/shadows/Purple shadow footer V2.png"
+    />
+    <div class="contact-main">
+      <div class="contact-title">
+        Contact
+        <div class="contact-stroke"></div>
+      </div>
+      <div class="contact-container">
+        <div class="contact-description-container">
+          <div class="contact-description-title">Got a problem to solve?</div>
+          <div>
+            Contact me through this form, I am interested in hearing from you,
+            knowing your ideas, and contributing to your projects with my work.
+          </div>
+          <div>Need a Frontend developer? <b>Contact me!</b></div>
+        </div>
+        <form class="contact-form-container" (submit)="sendMessage($event)">
+          <div>
+            <div class="contact-input-name">
+              <input
+                class="contact-name"
+                [(ngModel)]="inputValue0"
+                id="name"
+                type="text"
+                name="inputName"
+                placeholder="Your name"
+                (input)="checkInputName()"
+                [ngStyle]="setStyleBorder(requiredName)"
+              />
+              <img
+                *ngIf="requiredName"
+                class="contact_check_name"
+                src="/assets/icons/check.png"
+              />
+              <img
+                *ngIf="!requiredName && this.requiredCheck > 0"
+                class="contact_check_name"
+                src="/assets/icons/empty.png"
+              />
+            </div>
+            <div
+              *ngIf="!requiredName && this.requiredCheck > 0"
+              class="contact-required"
+            >
+              Your name is required.
+            </div>
+          </div>
+          <div class="contact-input-name">
+            <input
+              class="contact-name contact-input"
+              type="email"
+              id="email"
+              [(ngModel)]="inputValue1"
+              (input)="checkInputEmail()"
+              name="inputEmail"
+              placeholder="Your email"
+              [ngStyle]="setStyleBorder(requiredEmail)"
+            />
+            <img
+              *ngIf="requiredEmail && !this.checkMail(this.inputValue1)"
+              class="contact_check"
+              src="/assets/icons/check.png"
+            />
+            <img
+              *ngIf="!requiredEmail && this.requiredCheck > 0"
+              class="contact_check"
+              src="/assets/icons/empty.png"
+            />
+            <div
+              *ngIf="!requiredEmail && this.requiredCheck > 0"
+              class="contact-required"
+            >
+              Your email is required.
+            </div>
+          </div>
+          <div class="contact-input-name">
+            <textarea
+              class="contact-name contact-input"
+              type="text"
+              id="text"
+              [(ngModel)]="inputValue2"
+              (input)="checkInputText()"
+              name="inputText"
+              rows="8"
+              placeholder="Your message"
+              [ngStyle]="setStyleBorder(requiredText)"
+            ></textarea>
+            <img
+              *ngIf="requiredText"
+              class="contact_check"
+              src="/assets/icons/check.png"
+            />
+            <img
+              *ngIf="!requiredText && this.requiredCheck > 0"
+              class="contact_check"
+              src="/assets/icons/empty.png"
+            />
+            <div
+              *ngIf="!requiredText && this.requiredCheck > 0"
+              class="contact-required"
+            >
+              Your message is empty.
+            </div>
+          </div>
+          <div>
+            <div class="contact-box-form">
+              <img
+                *ngIf="!checkbox"
+                (click)="checkboxtoggle()"
+                class="contact-box"
+                src="/assets/btn/check_default.png"
+              />
+              <img
+                *ngIf="checkbox"
+                (click)="checkboxtoggle()"
+                class="contact-box"
+                src="/assets/btn/checked.png"
+              />
+              <span
+                >I've read the <a href="#">privacy policy</a> and agree to the
+                processing of my data as outlined.</span
+              >
+              <img src="/assets/btn/checked.png" hidden />
+            </div>
+            <div
+              *ngIf="!requiredCheckbox && this.requiredCheck > 0 && !checkbox"
+              class="contact-required"
+            >
+              Please acept the privacy policy.
+            </div>
+          </div>
+          <button *ngIf="checkbox" class="contact-btn btn-checked" type="submit">
+            Send message :)
+          </button>
+          <button
+            *ngIf="!checkbox"
+            class="contact-btn btn-required"
+            type="submit"
+          >
+            Send message :)
+          </button>
+        </form>
+      </div>
+      <div class="contact-back">
+        <a href="#header"><img src="/assets/btn/green.png" /></a>
+      </div>
+    </div>
+  </div>

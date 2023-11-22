@@ -1,0 +1,19 @@
+<footer>
+  <div class="footer-main-container">
+    <div class="footer-impressum">
+      <a href="#header" class="footer-name"><img src="/assets/icons/name.png" /></a>
+      <a class="footer-desktop" [routerLink]="'/imprint'" target="_blank">Impressum</a>
+    </div>
+    <div class="footer-copyright">© Bastian Riedmann 2023</div>
+    <div class="footer-icon-container">
+      <a (click)="openURL('https://github.com/GandaMitsuo')"><img class="footer-icon"
+          src="/assets/btn/social_btn/git_default.png" /></a>
+      <a href="mailto:Riedmann.Basti@gmail.com"><img class="footer-icon"
+          src="/assets/btn/social_btn/email_default.png" /></a>
+      <a (click)="
+            openURL('https://www.linkedin.com/in/basti-riedmann-1a334729b')
+          "><img class="footer-icon" src="/assets/btn/social_btn/linkedin_default.png" /></a>
+    </div>
+    <a class="footer-mobil" [routerLink]="'/imprint'" target="_blank">Impressum</a>
+  </div>
+</footer>

@@ -1,0 +1,28 @@
+<div class="my-skills-main-container" id="my-skills">
+    <div class="my-skills-btn-container my-skills-mobil">
+      <a href="#contact"><button class="my-skills-btn">Get in touch</button></a>
+    </div>
+    <div class="my-skills-container">
+      <div *ngFor="let item of skills" class="my-skills-icons">
+        <img class="my-skills-img" src="/assets/icons/{{ item.img }}" />
+        <div>{{ item.text }}</div>
+      </div>
+    </div>
+    <div class="my-skills-text-container">
+      <div class="my-skills-title">
+        My skills
+        <div class="my-skills-stroke"></div>
+      </div>
+      <div class="my-skills-description">
+        I have gained experience in building projects with various front end
+        technologies and concepts.
+      </div>
+      <div class="my-skills-btn-container my-skills-desktop">
+        <a href="#contact"
+          ><button class="my-skills-btn my-skills-desktop">
+            Get in touch
+          </button></a
+        >
+      </div>
+    </div>
+  </div>

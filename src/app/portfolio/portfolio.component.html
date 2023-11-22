@@ -1,0 +1,59 @@
+<div class="portfolio-main-container" id="portfolio">
+    <img
+      class="portfolio-shadow-title"
+      src="/assets/shadows/Green shadow 3 (skills and portfolio section).png"
+    />
+  
+    <img
+      class="portfolio-shadow"
+      src="/assets/shadows/Purple shadow footer v1 and portfolio section.png"
+    />
+    <div class="portfolio-projects">
+      <img
+        class="portfolio-shadow-bottom"
+        src="/assets/shadows/Green shadow 3 (skills and portfolio section).png"
+      />
+      <div class="portfolio-title">
+        <div class="portfolio-stroke-left" #projectElement></div>
+        Portfolio
+        <div class="portfolio-stroke-right"></div>
+      </div>
+      <div class="portfolio-title-description">
+        This page is a sample of my work - please feel free to try them out.
+      </div>
+      <div class="portfolio-selection-container">
+        <div *ngFor="let typebtn of projectsBtn" class="portfolio-selection">
+          <button class="box-shadow" (click)="filterProjects(typebtn)">
+            {{ typebtn }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-project-container">
+      <div
+      #projectElement
+        id="projectElement"
+        *ngFor="let project of selectedProjects; let i = index"
+        class="portfolio-project"
+        [fxLayout]="i % 2 === 0 ? 'row' : 'row-reverse'"
+        [ngClass]="i % 2 === 0 ? 'fly-in-left' : 'fly-in-right'"
+      >
+        <img src="{{ project.img }}" />
+        <div class="portfolio-pro-container">
+          <div class="portfolio-pro-title">{{ project.title }}</div>
+          <div class="portfolio-pro-types">
+            <div>{{ project.types }}</div>
+          </div>
+          <div class="portfolio-pro-description">{{ project.description }}</div>
+          <div class="portfolio-pro-btn">
+            <button class="portfolio-pro-live box-shadow" (click)="openURL(project.ref)">
+              Live test
+            </button>
+            <button class="portfolio-pro-git box-shadow" (click)="openURL(project.github)">
+              Github
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

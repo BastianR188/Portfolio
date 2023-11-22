@@ -1,0 +1,34 @@
+<header id="header">
+  <div class="header-name" href="#header">
+    <img src="/assets/icons/name.png" />
+  </div>
+  <div class="nav">
+    <!-- <div class="effect-fill">
+        <a href="#about-me">About me</a>
+      </div> -->
+      <div *ngFor="let link of navLinks">
+        <a href="{{ link.href }}">
+          <div class="wrapper" [style.width.px]="link.width">
+            <div class="fill-text">
+              <div class="fill-wrapper" [style.width.px]="link.width">
+                {{ link.text }}
+              </div>
+            </div>
+            <div href="#about-me" class="text" [style.width.px]="link.width">
+              {{ link.text }}
+            </div>
+          </div>
+        </a>
+      </div>
+  </div>
+  <div class="nav-btn" (click)="toggleWin()">
+    <img *ngIf="!isExpanded" src="/assets/btn/burger.png" />
+    <img *ngIf="isExpanded" src="/assets/btn/close.png" />
+  </div>
+  <div class="nav-window" id="nav_window">
+    <a (click)="toggleWin()" href="#about-me">About me</a>
+    <a (click)="toggleWin()" href="#my-skills">Skills</a>
+    <a (click)="toggleWin()" href="#portfolio">Portfolio</a>
+    <a (click)="toggleWin()" href="#contact">Conctact</a>
+  </div>
+</header>

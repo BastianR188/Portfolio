@@ -1,0 +1,247 @@
+.title-main {
+  position: relative;
+  height: calc(100vh - 110px);
+  width: 100vw;
+  max-width: 1440px;
+  background-color: #141d2f;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.title-vector {
+  position: absolute;
+  top: 60px;
+z-index: 1;
+width: 100vw;
+height: 1000px;
+min-width: 1440px;
+max-width: 100%;
+left: 0;
+}
+
+
+.title-stroke-container {
+  position: relative;
+  min-width: 100px;
+}
+
+.title-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .title-pic-container {
+    display: flex;
+    justify-content: center;
+  }
+  .title-img {
+    position: relative;
+    height: 60%;
+    width: 35%;
+
+    .title-shadow-pic-purple {
+      width: 407px;
+      height: 608px;
+      right: 30%;
+      top: 0;
+      filter: blur(46.5px);
+    }
+
+    .title-shadow-pic-green {
+      width: 521px;
+      height: 378px;
+      transform: rotate(100deg);
+      left: 40%;
+      top: 0;
+      filter: blur(46.5px);
+    }
+
+    .title-pic {
+    }
+
+    img {
+      position: absolute;
+    }
+
+    
+  }
+}
+
+.title-main-text-container {
+  position: relative;
+  width: calc(70% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+  flex-direction: column;
+  z-index: 3;
+  img {
+    position: absolute;
+  }
+
+  .title-btn {
+    margin-top: 44px;
+    padding: 15px 30px;
+    background-color: #70e61c;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #ffff;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: all 0.125s ease;
+
+    &:hover {
+      background-color: #9747ff;
+      transform: scale(1.2);
+      transition: all 0.125s ease;
+    }
+  }
+
+  .title-name {
+    position: relative;
+    font-size: 90px;
+    font-weight: 700;
+  }
+  .title-pronom {
+    transform: rotate(-90deg);
+    font-size: 64px;
+    font-weight: 400;
+    height: 30px;
+    margin-top: 65px;
+    white-space: nowrap;
+  }
+
+  .title-text {
+    color: #9747ff;
+    font-size: 58px;
+    font-weight: 400;
+  }
+  .title-name-container {
+    display: flex;
+  }
+}
+
+.title-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  .title-nav-icon {
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    z-index: 3;
+
+    img {
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      transition: all 0.125s ease;
+
+      &:hover {
+        transform: scale(1.33);
+        transition: all 0.125s ease;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: #ffff;
+    }
+
+    .title-stroke {
+      position: absolute;
+      height: 0;
+      flex-shrink: 0;
+      border: 2px solid #9747ff;
+      border-radius: 2px;
+      width: 100vw;
+      right: 0;
+      top: -6px;
+    }
+  }
+
+  .title-scroll-container {
+    margin-right: 100px;
+    margin-bottom: 35px;
+    z-index: 3;
+
+    .title-scroll-down {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 23px;
+      font-weight: 400;
+    }
+  }
+}
+
+.title-icon-container {
+  display: flex;
+  gap: 42px;
+  z-index: 3;
+}
+.title-mobil {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .title-stroke-container {
+  }
+  .title-nav-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title-main {
+    height: auto;
+  }
+  .title-email {
+    width: 100px;
+    opacity: 0;
+  }
+  .title-scroll-container {
+    display: none;
+  }
+  .title-container {
+    flex-direction: column;
+  }
+  .title-main-text-container {
+    margin-right: 0;
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 40px;
+    height: 40%;
+  }
+  .title-nav-icon {
+    width: 100%;
+  }
+  .title-mobil {
+    display: block;
+    opacity: 0;
+  }
+  .title-img {
+    width: 100% !important;
+    height: 500px !important;
+  }
+  .title-text {
+    font-size: 29px !important;
+  }
+  .title-name {
+    font-size: 45px !important;
+  }
+  .title-pronom {
+    font-size: 32px !important;
+    margin-top: 30px !important;
+  }
+  .title-shadow-pic-green {
+    top: 100px !important;
+  }
+}
