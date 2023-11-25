@@ -239,6 +239,9 @@
 }
 
 @media (max-width: 1024px) {
+  .contact-title{
+    font-size: 45px !important;
+  }
   .contact-container {
     flex-direction: column;
     gap: 45px;
@@ -252,5 +255,11 @@
 
   .contact-main-container {
     padding: 0 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-btn{
+    width: 100%;
   }
 }
