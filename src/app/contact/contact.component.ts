@@ -28,9 +28,9 @@ export class ContactComponent {
 
   //   }
   // }
-  inputValue0: string;
-  inputValue1: string;
-  inputValue2: string;
+  inputValue0: string = '';
+  inputValue1: string = '';
+  inputValue2: string = '';
   requiredName = false;
   requiredEmail = false;
   requiredText = false;
@@ -45,9 +45,6 @@ export class ContactComponent {
   };
 
   constructor() {
-    this.inputValue0 = '';
-    this.inputValue1 = '';
-    this.inputValue2 = '';
   }
 
   checkMail(input: string) {

@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   min-height: 1100px;
+
   .portfolio-shadow-title {
     top: 0;
     left: -160px;
@@ -16,6 +17,7 @@
     filter: blur(46.5px);
     z-index: 1;
   }
+
   .portfolio-shadow {
     position: absolute;
     top: 35%;
@@ -25,6 +27,7 @@
     filter: blur(46.5px);
     z-index: 1;
   }
+
   .portfolio-shadow-bottom {
     position: absolute;
     right: -180px;
@@ -36,9 +39,15 @@
     z-index: 1;
   }
 }
-.box-shadow{
+.portfolio-main-shadow-container {
+  max-width: 1440px;
+  position: relative;
+  margin: auto;
+}
+.box-shadow {
   box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
 }
+
 .portfolio-title {
   position: relative;
   display: flex;
@@ -49,6 +58,7 @@
   padding: 150px 42px 35px 36px;
   width: 390px;
   z-index: 1;
+
   .portfolio-stroke-left {
     position: absolute;
     right: 469px;
@@ -56,6 +66,7 @@
     width: 110px;
     border-radius: 2px;
   }
+
   .portfolio-stroke-right {
     position: absolute;
     left: 468px;
@@ -114,12 +125,14 @@
     z-index: 1;
     border-radius: 50px;
   }
+
   .portfolio-pro-container {
     max-width: 513px;
     display: flex;
     flex-direction: column;
     align-items: start;
     z-index: 1;
+
     .portfolio-pro-title {
       text-shadow: 0px 0px 5px #000000;
       text-align: center;
@@ -127,22 +140,26 @@
       font-weight: 700;
       color: #9747ff;
     }
+
     .portfolio-pro-types {
       margin: 15px 0;
       font-size: 23px;
       font-weight: 400;
       color: #70e61c;
     }
+
     .portfolio-pro-description {
       font-size: 16px;
       font-weight: 400;
     }
   }
+
   .portfolio-pro-btn {
     display: flex;
     justify-content: space-around;
     gap: 86px;
     margin-top: 35px;
+
     .portfolio-pro-live {
       border-radius: 10px;
       border: none;
@@ -156,11 +173,13 @@
       cursor: pointer;
       font-size: 23px;
       font-weight: 400;
+
       &:hover {
         transition: all 0.125s ease;
         background-color: #70e61c;
       }
     }
+
     .portfolio-pro-git {
       border-radius: 10px;
       border: 1px solid #70e61c;
@@ -182,6 +201,7 @@
     }
   }
 }
+
 .portfolio-selection-container {
   display: flex;
   flex-wrap: wrap;
@@ -189,6 +209,7 @@
   margin: 150px 100px;
   gap: 25px;
   z-index: 3;
+
   .portfolio-selection {
     button {
       display: inline-flex;
@@ -205,10 +226,12 @@
       font-size: 23px;
       font-weight: 400;
       cursor: pointer;
+
       &:hover {
         background-color: #9747ff;
         border-color: #9747ff;
       }
+
       &:focus {
         background-color: #70e61c;
         border-color: #70e61c;
@@ -216,11 +239,13 @@
     }
   }
 }
+
 @media (max-width: 1024px) {
   .portfolio-project {
     flex-direction: column !important;
     margin: 0 0 100px;
     gap: 35px;
+
     img {
       width: 100%;
       height: auto;
@@ -228,15 +253,18 @@
       max-height: 340px;
     }
   }
+
   .portfolio-pro-container {
     align-items: center !important;
     margin: 0 25px !important;
   }
 }
+
 @keyframes fly-in-right {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -246,6 +274,7 @@
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }

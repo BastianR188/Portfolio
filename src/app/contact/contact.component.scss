@@ -7,6 +7,12 @@
   overflow: hidden;
 }
 
+.contact-main-shadow-container {
+  max-width: 1440px;
+  position: relative;
+  margin: auto;
+}
+
 .contact-main {
   max-width: 1440px;
   margin: auto;
@@ -27,6 +33,7 @@
   margin-bottom: 85px;
   width: 100px;
   z-index: 2;
+
   .contact-stroke {
     position: absolute;
     border: 2px solid #9747ff;
@@ -66,6 +73,7 @@
   flex-direction: column;
   gap: 25px;
   z-index: 5;
+
   .contact-description-title {
     font-size: 32px;
     font-weight: 700;
@@ -78,9 +86,11 @@
   flex-direction: column;
   gap: 25px;
   z-index: 2;
+
   .contact-input-name {
     position: relative;
     margin-right: 50px;
+
     .contact_check {
       position: absolute;
       right: -40px;
@@ -91,6 +101,7 @@
       animation-timing-function: ease;
       animation-iteration-count: 1;
     }
+
     .contact_check_name {
       position: absolute;
       right: -40px;
@@ -101,20 +112,24 @@
       animation-timing-function: ease;
       animation-iteration-count: 1;
     }
+
     .contact-resizer {
       position: absolute;
       bottom: 2px;
       right: -48px;
     }
+
     @keyframes check-required {
       0% {
         opacity: 0;
       }
+
       100% {
         opacity: 1;
       }
     }
   }
+
   .contact-name {
     outline: none;
     max-width: 610px;
@@ -131,6 +146,7 @@
     margin-bottom: 8px;
     resize: vertical;
     max-height: 680px;
+
     &:focus-visible {
       border: 1px solid #70e61c;
     }
@@ -139,6 +155,7 @@
   .contact-input {
     margin-top: 35px;
   }
+
   .contact-required {
     font-size: 14px;
     font-weight: 400;
@@ -149,11 +166,13 @@
     animation-duration: 1s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
+
     @keyframes move-down {
       0% {
         opacity: 0;
         transform: translateY(-25px);
       }
+
       100% {
         overflow: 1;
         transform: translateY(0);
@@ -161,28 +180,34 @@
     }
   }
 }
+
 .contact-box-form {
   display: flex;
   flex-direction: row;
   margin-bottom: 8px;
   align-items: center;
+
   .contact-box {
     cursor: pointer;
     margin-right: 8px;
+
     &:hover {
       border-radius: 100%;
       background-color: rgba($color: #1cdae6, $alpha: 0.3);
     }
   }
+
   a {
     text-decoration: none;
     color: #9747ff;
     cursor: pointer;
+
     &:hover {
       text-decoration: underline;
     }
   }
 }
+
 .contact-btn {
   margin: 44px auto 0 auto;
   width: 250px;
@@ -200,6 +225,7 @@
   background-color: #b6b6b6;
   cursor: default;
 }
+
 .btn-checked {
   cursor: pointer;
   transition: all 0.125s ease;
@@ -217,11 +243,13 @@
     flex-direction: column;
     gap: 45px;
   }
+
   .contact-description-container,
   .contact-name {
     width: auto;
     max-width: none !important;
   }
+
   .contact-main-container {
     padding: 0 25px;
   }
