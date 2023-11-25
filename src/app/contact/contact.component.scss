@@ -54,13 +54,13 @@
   display: flex;
   justify-content: end;
   padding: 35px 0 95px 0;
-
   img {
     cursor: pointer;
     filter: brightness(1000%);
-
+    transition: all 0.125s ease-in-out;
     &:hover {
       filter: brightness(100%);
+      filter: saturate(200%);
     }
   }
 }

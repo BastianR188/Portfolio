@@ -225,8 +225,7 @@
       color: white;
       font-size: 23px;
       font-weight: 400;
-      cursor: pointer;
-
+transition: all 0.125s ease-in-out;
       &:hover {
         background-color: #9747ff;
         border-color: #9747ff;
