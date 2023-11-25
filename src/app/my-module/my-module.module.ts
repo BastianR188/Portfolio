@@ -13,6 +13,7 @@ import { SuccessComponent } from '../success/success.component';
 import { TitleComponent } from '../title/title.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { FormComponent } from '../form/form.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     MySkillsComponent,
     SuccessComponent,
     PortfolioComponent,  
+    FormComponent,
 ],
   imports: [
     CommonModule,

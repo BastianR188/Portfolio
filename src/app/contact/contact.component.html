@@ -17,15 +17,17 @@
           </div>
           <div>Need a Frontend developer? <b>Contact me!</b></div>
         </div>
-        <form class="contact-form-container" (submit)="sendMessage($event)">
+        <!-- <app-form></app-form> -->
+        <form class="contact-form-container" ngNativeValidate (submit)="sendMessage($event)" #myForm>
           <div>
             <div class="contact-input-name">
               <input
+              #nameField
                 class="contact-name"
                 [(ngModel)]="inputValue0"
                 id="name"
                 type="text"
-                name="inputName"
+                name="name"
                 placeholder="Your name"
                 (input)="checkInputName()"
                 [ngStyle]="setStyleBorder(requiredName)"
@@ -50,12 +52,13 @@
           </div>
           <div class="contact-input-name">
             <input
+            #emailField
               class="contact-name contact-input"
               type="email"
               id="email"
               [(ngModel)]="inputValue1"
               (input)="checkInputEmail()"
-              name="inputEmail"
+              name="email"
               placeholder="Your email"
               [ngStyle]="setStyleBorder(requiredEmail)"
             />
@@ -78,12 +81,13 @@
           </div>
           <div class="contact-input-name">
             <textarea
+            #messageField
               class="contact-name contact-input"
               type="text"
               id="text"
               [(ngModel)]="inputValue2"
               (input)="checkInputText()"
-              name="inputText"
+              name="message"
               rows="8"
               placeholder="Your message"
               [ngStyle]="setStyleBorder(requiredText)"
