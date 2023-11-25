@@ -88,7 +88,6 @@
   font-size: 16px;
   font-weight: 400;
   z-index: 1 !important;
-  text-wrap: balance;
 }
 
 .portfolio-project-container {
@@ -260,6 +259,9 @@ transition: all 0.125s ease-in-out;
     align-items: center !important;
     margin: 0 25px !important;
   }
+  .portfolio-main-shadow-container{
+    margin: unset;
+  }
 }
 
 @keyframes fly-in-right {
@@ -279,5 +281,11 @@ transition: all 0.125s ease-in-out;
 
   to {
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 360px) {
+  .portfolio-pro-btn{
+    flex-direction: column;
   }
 }

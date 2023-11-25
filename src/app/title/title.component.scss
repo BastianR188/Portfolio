@@ -220,6 +220,7 @@ left: 0;
   }
   .title-nav-icon {
     width: 100%;
+    justify-content: center;
     a {
       width: 100px !important;
     }
@@ -244,5 +245,8 @@ left: 0;
   }
   .title-shadow-pic-green {
     top: 100px !important;
+  }
+  .title-name{
+    margin-right: 20px;
   }
 }
