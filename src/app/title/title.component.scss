@@ -1,6 +1,6 @@
 .title-main {
   position: relative;
-  height: calc(100vh - 110px);
+  min-height: calc(100vh - 110px);
   width: 100vw;
   max-width: 1526px;
   background-color: #141d2f;
@@ -11,7 +11,7 @@
 }
 .title-pic{
   height: 480px;
-  bottom: -120px;
+  bottom: -240px;
   right: 0;
 }
 .title-vector {
