@@ -6,31 +6,31 @@
   margin: auto;
   overflow: hidden;
 }
-.success{
-text-align: center;
-color: #70e61c;
-animation-name: sucess;
-animation-duration: 8s;
-animation-timing-function: ease;
-animation-iteration-count: 1;
-font-size: 23px;
-font-weight: 400;
-max-width: 100%;
+
+.loading {
+  text-align: center;
+  color: #70e61c;
+  animation-name: check-required;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  font-size: 23px;
+  font-weight: 400;
+  max-width: 100%;
 }
-@keyframes sucess {
-  0%{
-    opacity: 0;
-  }
-  10%{
-    opacity: 1;
-  }
-  90%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
+
+.success {
+  text-align: center;
+  color: #70e61c;
+  animation-name: check-required;
+  animation-duration: 8s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  font-size: 23px;
+  font-weight: 400;
+  max-width: 100%;
 }
+
 .contact-main-shadow-container {
   max-width: 1440px;
   position: relative;
@@ -79,10 +79,12 @@ max-width: 100%;
   display: flex;
   justify-content: end;
   padding: 35px 0 95px 0;
+
   img {
     cursor: pointer;
     filter: brightness(1000%);
     transition: all 0.125s ease-in-out;
+
     &:hover {
       filter: brightness(100%);
       filter: saturate(200%);
@@ -263,22 +265,27 @@ max-width: 100%;
     transition: all 0.125s ease;
   }
 }
-.preload{
+
+.preload {
   width: 0;
   height: 0;
   opacity: 0;
 }
+
 @media (max-width: 1024px) {
   .contact-form-container {
     width: unset !important;
   }
-  .contact-title{
+
+  .contact-title {
     font-size: 45px !important;
   }
-  .contact-stroke{
+
+  .contact-stroke {
     right: 105px !important;
     top: 25px !important;
   }
+
   .contact-container {
     flex-direction: column;
     gap: 45px;
@@ -296,7 +303,7 @@ max-width: 100%;
 }
 
 @media (max-width: 360px) {
-  .contact-btn{
+  .contact-btn {
     width: 100%;
     white-space: nowrap;
   }

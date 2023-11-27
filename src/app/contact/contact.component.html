@@ -64,13 +64,14 @@
             </div>
           </div>
           <button *ngIf="checkbox && requiredText && requiredName && requiredEmail" class="contact-btn btn-checked"
-            type="submit"  (click)="toggleWin()">
+            type="submit">
             Send message :)
           </button>
+          <div class="loading" *ngIf="loading">Bitte warten Sie, der Vorgang wird bearbeitet...</div>
           <div class="success" *ngIf="success">Vielen Dank für Ihre Kontaktaufnahme.<br>Ich werde mich so bald wie möglich mit
             Ihnen in Verbindung setzen.</div>
           <button *ngIf="!checkbox || !requiredText || !requiredName || !requiredEmail" class="contact-btn btn-required"
-            type="submit" (click)="toggleWin()">
+            type="submit">
             Send message :)
           </button>
         </form>

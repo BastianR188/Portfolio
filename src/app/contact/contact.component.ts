@@ -26,6 +26,7 @@ export class ContactComponent {
     message: '',
   };
   success=false;
+  loading=false;
 
   constructor() {}
 
@@ -73,10 +74,14 @@ export class ContactComponent {
     if (this.requiredCheck == 0) {
       this.setData();
       this.sendMail();
+    } else {
+      this.loading = false;
+      this.success = false;
     }
   }
 
   private setData() {
+    this.loading = true;
     this.userData = {
       name: this.inputValue0,
       mail: this.inputValue1,
@@ -110,7 +115,9 @@ export class ContactComponent {
       },
     })
       .then(() => {
-        this.toggleWin();
+        this.loading = false;
+        this.checkbox = false;
+        this.success = true;
       })
       .catch((error) => {
         console.log(error);
@@ -147,13 +154,5 @@ export class ContactComponent {
     }
   }
 
-  
-
-  toggleWin() {
-    this.success = true;
-    setTimeout(() => {
-      this.success = false;
-    }, 8000);
-  }
   
 }
