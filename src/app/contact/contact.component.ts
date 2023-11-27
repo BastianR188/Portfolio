@@ -128,7 +128,7 @@ export class ContactComponent {
       },
     })
       .then(() => {
-        window.location.href = './success';
+        window.location.href = './success/';
       })
       .catch((error) => {
         console.log(error);

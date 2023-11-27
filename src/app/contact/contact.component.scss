@@ -37,6 +37,7 @@
   .contact-stroke {
     position: absolute;
     border: 2px solid #9747ff;
+    border-radius: 2px;
     height: 0;
     width: 100vw;
     right: 150px;
@@ -241,6 +242,10 @@
 @media (max-width: 1024px) {
   .contact-title{
     font-size: 45px !important;
+  }
+  .contact-stroke{
+    right: 105px !important;
+    top: 25px !important;
   }
   .contact-container {
     flex-direction: column;

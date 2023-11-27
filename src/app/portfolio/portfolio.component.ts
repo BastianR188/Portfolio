@@ -13,13 +13,12 @@ export class PortfolioComponent {
 
 
 
-  projectsBtn = ['All', 'Angular', 'TypeScript', 'JavaScript', 'HTML', 'SCSS', 'Firebase', 'CSS', 'API',
-  ];
+  projectsBtn = ['All', 'Angular', 'JavaScript'];
 
   projects = [
     {
       title: 'Join',
-      types: 'Angular | TypeScript | HTML | CSS',
+      types: 'HTML | CSS | JavaScript',
       img: './assets/img/join2.png',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       ref: 'https://bastian-riedmann.developerakademie.net/join/index.html',
@@ -42,28 +41,12 @@ export class PortfolioComponent {
       github: 'https://github.com/GandaMitsuo/Pokedex',
     },
     {
-      title: 'Simple CRM - NOT YET READY',
-      types: 'Angular | Firebase',
-      img: './assets/img/crm.png',
-      description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
-      ref: '',
-      github: '',
-    },
-    {
       title: 'Portfolio',
       types: 'Angular | TypeScript | SCSS',
       img: './assets/img/portfolio.png',
       description: 'My portfolio showcases my front-end development projects, highlighting my coding skills, UI/UX sensibilities, and professional personality to demonstrate my expertise and experience in creating beautiful and functional web interfaces.',
       ref: '#header',
       github: 'https://github.com/GandaMitsuo/Portfolio.git',
-    },
-    {
-      title: 'Ring of Fire',
-      types: 'Angular | TypeScript | Firebase | SCSS',
-      img: './assets/img/ringoffire.jpg',
-      description: 'The Ring of Fire is a drinking game in which the players pull cards clockwise and have to perform specific actions depending on the card, while a glass with a schnapps mix is in the middle of the table.',
-      ref: 'https://ring-of-fire-6bd03.web.app/',
-      github: 'https://github.com/GandaMitsuo/RingOfFire',
     },
   ];
 

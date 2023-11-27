@@ -242,10 +242,11 @@ transition: all 0.125s ease-in-out;
 @media (max-width: 1024px) {
   .portfolio-title{
     font-size: 45px !important;
+    width: 190px !important;
   }
   .portfolio-project {
     flex-direction: column !important;
-    margin: 0 0 100px;
+    margin: 0 25px 100px;
     gap: 35px;
 
     img {
@@ -258,12 +259,20 @@ transition: all 0.125s ease-in-out;
 
   .portfolio-pro-container {
     align-items: center !important;
-    margin: 0 25px !important;
   }
   .portfolio-main-shadow-container{
     margin: unset;
+    max-width: 100%;
+  }
+
+  .portfolio-stroke-left{
+    right: 250px !important;
+  }
+  .portfolio-stroke-right{
+    left: 250px !important;
   }
 }
+
 
 @keyframes fly-in-right {
   from {

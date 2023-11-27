@@ -15,6 +15,7 @@
   justify-content: space-between;
   align-items: start;
   z-index: 1;
+
   .about-container {
     display: flex;
     flex-direction: column;
@@ -29,18 +30,23 @@
     gap: 35px;
     z-index: 1;
   }
+
   .about-title {
     font-size: 90px;
     font-weight: 700;
     white-space: nowrap;
   }
+
   .about-me {
     display: flex;
     gap: 35px;
     margin-left: 20px;
+
+
+
     img {
       width: 35px;
-      height: 50px;
+      height: 35px;
       transition: all 0.125s ease;
 
       &:hover {
@@ -48,6 +54,7 @@
         transition: all 0.125s ease;
       }
     }
+
     .marginx-7 {
       margin: 0 7px;
     }
@@ -61,6 +68,7 @@
   align-items: center;
   z-index: 1;
   margin-right: 100px;
+
   .about-pic {
     border: 4px solid #70e61c;
     border-radius: 100%;
@@ -70,12 +78,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
+
+    img {
       width: 140%;
       margin-top: 370px;
       margin-left: 60px;
     }
   }
+
   .about-stroke {
     position: absolute;
     z-index: 1;
@@ -101,24 +111,29 @@
     margin-right: 0 !important;
   }
 }
+
 @media (max-width: 1024px) {
   .about-title {
     white-space: normal !important;
     font-size: 45px !important;
-
+    text-align: left;
   }
+
   .about-img {
     display: none;
   }
+
   .about-container {
     margin-right: 25px !important;
   }
+
   .about-main {
     margin-left: 25px !important;
   }
 }
+
 @media (max-width: 360px) {
-  .about-me{
+  .about-me {
     flex-direction: column;
   }
 }

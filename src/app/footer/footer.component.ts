@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ImprintComponent } from '../imprint/imprint.component';
 
 @Component({
   selector: 'app-footer',

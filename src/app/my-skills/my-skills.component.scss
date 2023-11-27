@@ -117,7 +117,13 @@
   .my-skills-text-container {
     margin-left: 25px;
     margin-right: 25px;
-    align-items: center;
+    align-items: end;
+    width: calc(100% - 50px);
+    text-align: end;
+  }
+  .my-skills-stroke{
+    left: 192px !important;
+    top: 25px !important;
   }
   .my-skills-mobil {
     display: block;
