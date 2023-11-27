@@ -29,3 +29,12 @@ header {
     z-index: 5010;
   }
 }
+
+@media (max-width: 1024px) {
+  .impressum {
+    padding: 100px 25px;
+  }
+  header {
+    padding: 37px 25px;
+  }
+}

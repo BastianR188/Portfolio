@@ -1,13 +1,19 @@
 .main-container {
     min-height: calc(100vh - 110px - 294px);
-    width: 100%;
     background-color: #141d2f;
     color: #ffff;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 100px;
 }
+
+.green {
+    color: #70e61c;
+}
+
+
 
 header {
     inset: 0;
@@ -29,4 +35,13 @@ header {
         cursor: pointer;
         z-index: 5010;
     }
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        padding: 100px 25px;
+    }
+    header {
+        padding: 37px 25px;
+      }
 }

@@ -3,6 +3,8 @@ footer {
   z-index: 11;
   position: absolute;
   width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
   background-color: #141d2f;
 }
 
