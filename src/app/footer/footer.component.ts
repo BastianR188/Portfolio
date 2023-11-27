@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ImprintComponent } from '../imprint/imprint.component';
+import { Component, ElementRef } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +7,14 @@ import { ImprintComponent } from '../imprint/imprint.component';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  constructor(private router: Router) { }
   openURL(ur: string) {
     window.open(ur);
   }
+  openImprint() {
+    this.router.navigateByUrl('imprint');
+  }
+  openPage() {
+    this.router.navigateByUrl('');
+}
 }

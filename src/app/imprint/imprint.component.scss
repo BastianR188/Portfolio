@@ -7,3 +7,25 @@
 a {
   color: #70e61c;
 }
+
+header {
+  inset: 0;
+  background-color: #141d2f;
+  max-height: 110px;
+  padding: 37px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+
+  .header-name {
+    display: flex;
+    align-items: center;
+    color: #ffff;
+    font-size: 45px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 5010;
+  }
+}

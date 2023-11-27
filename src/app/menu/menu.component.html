@@ -1,5 +1,5 @@
 <header id="header">
-  <div class="header-name" href="#header">
+  <div (click)="openPage()" class="header-name" href="#header">
     <img src="assets/icons/name.png" />
   </div>
   <div class="nav">
@@ -26,9 +26,6 @@
     <img *ngIf="isExpanded" src="assets/btn/close.png" />
   </div>
   <div class="nav-window" id="nav_window">
-    <a (click)="toggleWin()" href="#about-me">About me</a>
-    <a (click)="toggleWin()" href="#my-skills">Skills</a>
-    <a (click)="toggleWin()" href="#portfolio">Portfolio</a>
-    <a (click)="toggleWin()" href="#contact">Conctact</a>
+    <a *ngFor="let link of navLinks" (click)="toggleWin()" href="{{ link.href }}">{{ link.text }}</a>
   </div>
 </header>

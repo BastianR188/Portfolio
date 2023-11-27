@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -28,7 +29,7 @@ export class ContactComponent {
   success=false;
   loading=false;
 
-  constructor() {}
+  constructor(private router: Router) { }
 
   checkMail(input: string) {
     if (input.indexOf('@') !== -1) {
@@ -122,6 +123,10 @@ export class ContactComponent {
       .catch((error) => {
         console.log(error);
       });
+  }
+
+  openImprint() {
+    this.router.navigateByUrl('imprint');
   }
 
   private checkPrivacy() {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
+  constructor(private router: Router) { }
   isExpanded = false;
   navLinks = [
     {
@@ -40,5 +42,10 @@ export class MenuComponent {
       document.body.style.overflow = 'hidden';
     }
     this.isExpanded = !this.isExpanded; // Toggle the state for the next click
+  }
+  openPage() {
+
+      this.router.navigateByUrl('');
+    
   }
 }

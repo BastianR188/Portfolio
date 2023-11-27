@@ -1,8 +1,8 @@
 <footer>
   <div class="footer-main-container">
     <div class="footer-impressum">
-      <a href="#header" class="footer-name"><img src="assets/icons/name.png" /></a>
-      <a class="footer-desktop" [routerLink]="'/imprint'" target="_blank">Impressum</a>
+      <a href="#header" (click)="openPage()" class="footer-name"><img src="assets/icons/name.png" /></a>
+      <a class="footer-desktop" (click)="openImprint()" href="#header">Impressum</a>
     </div>
     <div class="footer-copyright">© Bastian Riedmann 2023</div>
     <div class="footer-icon-container">
