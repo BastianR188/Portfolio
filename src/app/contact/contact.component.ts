@@ -125,8 +125,8 @@ export class ContactComponent {
       });
   }
 
-  openImprint() {
-    this.router.navigateByUrl('imprint');
+  openSuccess() {
+    this.router.navigateByUrl('success');
   }
 
   private checkPrivacy() {

@@ -45,7 +45,7 @@ export class MenuComponent {
   }
   openPage() {
 
-      this.router.navigateByUrl('success');
+      this.router.navigateByUrl('');
     
   }
 }
