@@ -6,7 +6,31 @@
   margin: auto;
   overflow: hidden;
 }
-
+.success{
+text-align: center;
+color: #70e61c;
+animation-name: sucess;
+animation-duration: 8s;
+animation-timing-function: ease;
+animation-iteration-count: 1;
+font-size: 23px;
+font-weight: 400;
+max-width: 100%;
+}
+@keyframes sucess {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 .contact-main-shadow-container {
   max-width: 1440px;
   position: relative;
@@ -87,6 +111,7 @@
   flex-direction: column;
   gap: 25px;
   z-index: 2;
+  width: 50%;
 
   .contact-input-name {
     position: relative;
@@ -238,8 +263,15 @@
     transition: all 0.125s ease;
   }
 }
-
+.preload{
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
 @media (max-width: 1024px) {
+  .contact-form-container {
+    width: unset !important;
+  }
   .contact-title{
     font-size: 45px !important;
   }

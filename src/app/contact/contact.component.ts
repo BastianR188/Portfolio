@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -9,22 +9,6 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  @ViewChild('myForm') myForm!: ElementRef;
-  @ViewChild('nameField') nameField!: ElementRef;
-  @ViewChild('emailField') emailField!: ElementRef;
-  @ViewChild('messageField') messageField!: ElementRef;
-
-  //   @HostListener('document:keydown.enter', ['$event'])
-  //   onEnterKeyPressed(event: KeyboardEvent) {
-  //     // Rufen Sie Ihre gewünschte Funktion hier auf
-  //     this.requiredCheck = 0;
-  //     this.checkName();
-  //     this.checkEmail();
-  //     this.checkMessage();
-  //     this.checkPrivacy();
-  //     if (this.requiredCheck == 0) {
-  //       this.setData();
-  //       this.sendMail();
 
   inputValue0: string = '';
   inputValue1: string = '';
@@ -41,9 +25,9 @@ export class ContactComponent {
     mail: '',
     message: '',
   };
+  success=false;
 
-  constructor() {
-  }
+  constructor() {}
 
   checkMail(input: string) {
     if (input.indexOf('@') !== -1) {
@@ -126,7 +110,7 @@ export class ContactComponent {
       },
     })
       .then(() => {
-        window.location.href = './success/';
+        this.toggleWin();
       })
       .catch((error) => {
         console.log(error);
@@ -165,5 +149,11 @@ export class ContactComponent {
 
   
 
-
+  toggleWin() {
+    this.success = true;
+    setTimeout(() => {
+      this.success = false;
+    }, 8000);
+  }
+  
 }
