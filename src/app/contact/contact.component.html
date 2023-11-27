@@ -1,9 +1,6 @@
 <div class="contact-main-container" id="contact">
   <div class="contact-main-shadow-container">
-    <img
-      class="contact-shadow-bottom"
-      src="assets/shadows/Purple shadow footer V2.png"
-    />
+    <img class="contact-shadow-bottom" src="assets/shadows/Purple shadow footer V2.png" />
     <div class="contact-main">
       <div class="contact-title">
         Contact
@@ -22,129 +19,56 @@
         <form class="contact-form-container" ngNativeValidate (submit)="sendMessage($event)" #myForm>
           <div>
             <div class="contact-input-name">
-              <input
-              #nameField
-                class="contact-name"
-                [(ngModel)]="inputValue0"
-                id="name"
-                type="text"
-                name="name"
-                placeholder="Your name"
-                (input)="checkInputName()"
-                [ngStyle]="setStyleBorder(requiredName)"
-              />
-              <img
-                *ngIf="requiredName"
-                class="contact_check_name"
-                src="assets/icons/check.png"
-              />
-              <img
-                *ngIf="!requiredName && this.requiredCheck > 0"
-                class="contact_check_name"
-                src="assets/icons/empty.png"
-              />
+              <input #nameField class="contact-name" [(ngModel)]="inputValue0" id="name" type="text" name="name"
+                placeholder="Your name" (input)="checkInputName()" [ngStyle]="setStyleBorder(requiredName)" />
+              <img *ngIf="requiredName" class="contact_check_name" src="assets/icons/check.png" />
+              <img *ngIf="!requiredName && this.requiredCheck > 0" class="contact_check_name"
+                src="assets/icons/empty.png" />
             </div>
-            <div
-              *ngIf="!requiredName && this.requiredCheck > 0"
-              class="contact-required"
-            >
+            <div *ngIf="!requiredName && this.requiredCheck > 0" class="contact-required">
               Your name is required.
             </div>
           </div>
           <div class="contact-input-name">
-            <input
-            #emailField
-              class="contact-name contact-input"
-              type="email"
-              id="email"
-              [(ngModel)]="inputValue1"
-              (input)="checkInputEmail()"
-              name="email"
-              placeholder="Your email"
-              [ngStyle]="setStyleBorder(requiredEmail)"
-            />
-            <img
-              *ngIf="requiredEmail && !this.checkMail(this.inputValue1)"
-              class="contact_check"
-              src="assets/icons/check.png"
-            />
-            <img
-              *ngIf="!requiredEmail && this.requiredCheck > 0"
-              class="contact_check"
-              src="assets/icons/empty.png"
-            />
-            <div
-              *ngIf="!requiredEmail && this.requiredCheck > 0"
-              class="contact-required"
-            >
+            <input #emailField class="contact-name contact-input" type="email" id="email" [(ngModel)]="inputValue1"
+              (input)="checkInputEmail()" name="email" placeholder="Your email"
+              [ngStyle]="setStyleBorder(requiredEmail)" />
+            <img *ngIf="requiredEmail && !this.checkMail(this.inputValue1)" class="contact_check"
+              src="assets/icons/check.png" />
+            <img *ngIf="!requiredEmail && this.requiredCheck > 0" class="contact_check" src="assets/icons/empty.png" />
+            <div *ngIf="!requiredEmail && this.requiredCheck > 0" class="contact-required">
               Your email is required.
             </div>
           </div>
           <div class="contact-input-name">
-            <textarea
-            #messageField
-              class="contact-name contact-input"
-              type="text"
-              id="text"
-              [(ngModel)]="inputValue2"
-              (input)="checkInputText()"
-              name="message"
-              rows="8"
-              placeholder="Your message"
-              [ngStyle]="setStyleBorder(requiredText)"
-            ></textarea>
-            <img
-              *ngIf="requiredText"
-              class="contact_check"
-              src="assets/icons/check.png"
-            />
-            <img
-              *ngIf="!requiredText && this.requiredCheck > 0"
-              class="contact_check"
-              src="assets/icons/empty.png"
-            />
-            <div
-              *ngIf="!requiredText && this.requiredCheck > 0"
-              class="contact-required"
-            >
+            <textarea #messageField class="contact-name contact-input" type="text" id="text" [(ngModel)]="inputValue2"
+              (input)="checkInputText()" name="message" rows="8" placeholder="Your message"
+              [ngStyle]="setStyleBorder(requiredText)"></textarea>
+            <img *ngIf="requiredText" class="contact_check" src="assets/icons/check.png" />
+            <img *ngIf="!requiredText && this.requiredCheck > 0" class="contact_check" src="assets/icons/empty.png" />
+            <div *ngIf="!requiredText && this.requiredCheck > 0" class="contact-required">
               Your message is empty.
             </div>
           </div>
           <div>
             <div class="contact-box-form">
-              <img
-                *ngIf="!checkbox"
-                (click)="checkboxtoggle()"
-                class="contact-box"
-                src="assets/btn/check_default.png"
-              />
-              <img
-                *ngIf="checkbox"
-                (click)="checkboxtoggle()"
-                class="contact-box"
-                src="assets/btn/checked.png"
-              />
-              <span
-                >I've read the <a href="#">privacy policy</a> and agree to the
-                processing of my data as outlined.</span
-              >
-              <img src="assets/btn/checked.png" hidden />
+              <img *ngIf="!checkbox" (click)="checkboxtoggle()" class="contact-box"
+                src="assets/btn/check_default.png" />
+              <img *ngIf="checkbox" (click)="checkboxtoggle()" class="contact-box" src="assets/btn/checked.png" />
+              <span>I've read the <a href="#">privacy policy</a> and agree to the
+                processing of my data as outlined.</span>
+              <img src="assets/btn/checked.png" class="preload" />
             </div>
-            <div
-              *ngIf="!requiredCheckbox && this.requiredCheck > 0 && !checkbox"
-              class="contact-required"
-            >
+            <div *ngIf="!requiredCheckbox && this.requiredCheck > 0 && !checkbox" class="contact-required">
               Please acept the privacy policy.
             </div>
           </div>
-          <button *ngIf="checkbox" class="contact-btn btn-checked" type="submit">
+          <button *ngIf="checkbox && requiredText && requiredName && requiredEmail" class="contact-btn btn-checked"
+            type="submit">
             Send message :)
           </button>
-          <button
-            *ngIf="!checkbox"
-            class="contact-btn btn-required"
-            type="submit"
-          >
+          <button *ngIf="!checkbox || !requiredText || !requiredName || !requiredEmail" class="contact-btn btn-required"
+            type="submit">
             Send message :)
           </button>
         </form>
@@ -154,4 +78,4 @@
       </div>
     </div>
   </div>
-  </div>
+</div>

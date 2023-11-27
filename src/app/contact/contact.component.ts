@@ -26,8 +26,6 @@ export class ContactComponent {
   //       this.setData();
   //       this.sendMail();
 
-  //   }
-  // }
   inputValue0: string = '';
   inputValue1: string = '';
   inputValue2: string = '';
