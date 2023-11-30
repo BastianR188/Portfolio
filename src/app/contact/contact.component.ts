@@ -26,8 +26,8 @@ export class ContactComponent {
     mail: '',
     message: '',
   };
-  success=false;
-  loading=false;
+  success = false;
+  loading = false;
 
   constructor(private router: Router) { }
 
@@ -96,6 +96,12 @@ export class ContactComponent {
     this.inputValue0 = '';
     this.inputValue1 = '';
     this.inputValue2 = '';
+    this.requiredName = false;
+    this.requiredEmail = false;
+    this.requiredText = false;
+    this.requiredCheckbox = false;
+    this.checkbox = false;
+    this.requiredCheck = 0;
 
     ['name', 'email', 'text'].forEach(type => {
       let element = document.getElementById(type);
@@ -159,5 +165,4 @@ export class ContactComponent {
     }
   }
 
-  
 }
