@@ -206,9 +206,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 150px 100px;
+  margin: 35px 25px;
   gap: 25px;
   z-index: 3;
+  white-space: nowrap;
 
   .portfolio-selection {
     button {
@@ -294,6 +295,12 @@ transition: all 0.125s ease-in-out;
   }
 }
 
+@media (max-width: 411px) {
+  .portfolio-pro-btn{
+    gap: 35px !important;
+    white-space: nowrap;
+  }
+}
 @media (max-width: 360px) {
   .portfolio-pro-btn{
     flex-direction: column;
