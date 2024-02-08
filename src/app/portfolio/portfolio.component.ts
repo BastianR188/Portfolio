@@ -22,7 +22,7 @@ export class PortfolioComponent {
       img: './assets/img/join2.png',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       ref: 'https://bastian-riedmann.developerakademie.net/join/index.html',
-      github: 'https://github.com/GandaMitsuo/Join',
+      github: 'https://github.com/BastianR188/Join',
     },
     {
       title: 'Sharkie',
@@ -30,15 +30,15 @@ export class PortfolioComponent {
       img: './assets/img/sharki2.jpg',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help shakrie to find coins and poison bottles to fight against the killer whale.',
       ref: 'https://bastian-riedmann.developerakademie.net/Sharki/index.html',
-      github: 'https://github.com/GandaMitsuo/Sharki',
+      github: 'https://github.com/BastianR188/Sharki',
     },
     {
-      title: 'Pokédex',
-      types: 'JavaScript | HTML | CSS | API',
+      title: 'Simple-CRM',
+      types: 'Angular | TypeScript | SCSS',
       img: './assets/img/pokedex2.jpg',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      description: 'A Simple Customer Relationship Management.',
       ref: 'https://bastian-riedmann.developerakademie.net/pokedex/index.html',
-      github: 'https://github.com/GandaMitsuo/Pokedex',
+      github: 'https://github.com/BastianR188/Simple-CRM',
     },
     {
       title: 'Portfolio',
@@ -46,7 +46,7 @@ export class PortfolioComponent {
       img: './assets/img/portfolio.png',
       description: 'My portfolio showcases my front-end development projects, highlighting my coding skills, UI/UX sensibilities, and professional personality to demonstrate my expertise and experience in creating beautiful and functional web interfaces.',
       ref: '#header',
-      github: 'https://github.com/GandaMitsuo/Portfolio.git',
+      github: 'https://github.com/BastianR188/Portfolio',
     },
   ];
 
