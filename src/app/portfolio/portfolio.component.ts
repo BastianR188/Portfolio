@@ -35,9 +35,9 @@ export class PortfolioComponent {
     {
       title: 'Simple-CRM',
       types: 'Angular | TypeScript | SCSS',
-      img: './assets/img/pokedex2.jpg',
+      img: './assets/img/crm2.jpg',
       description: 'A Simple Customer Relationship Management.',
-      ref: 'https://bastian-riedmann.developerakademie.net/pokedex/index.html',
+      ref: 'https://bastian-riedmann.developerakademie.net/simple-crm/index.html',
       github: 'https://github.com/BastianR188/Simple-CRM',
     },
     {
