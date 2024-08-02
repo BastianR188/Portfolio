@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,9 +14,17 @@ export class PortfolioComponent {
 
 
 
-  projectsBtn = ['All', 'Angular', 'JavaScript'];
+  projectsBtn = ['All', 'Angular', 'Vue', 'JavaScript'];
 
   projects = [
+    {
+      title: 'DABubble',
+      types: 'Angular | Firebase | TypeScript | SCSS',
+      img: './assets/img/dabubble2.jpg',
+      description: 'DABubble is a versatile chat application powered by Firebase. Sign in effortlessly, even with your Google account, and dive into interactive conversations. Create and join channels, invite users, chat publicly or privately, and start threads. DABubble offers a seamless, intuitive chatting experience tailored to your communication needs.',
+      ref: '',
+      github: 'https://github.com/TobiasRuhmanseder/DABubble',
+    },
     {
       title: 'Join',
       types: 'HTML | CSS | JavaScript',
@@ -23,6 +32,14 @@ export class PortfolioComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       ref: 'https://bastian-riedmann.developerakademie.net/join/index.html',
       github: 'https://github.com/BastianR188/Join',
+    },
+    {
+      title: 'Stock-Dashboard',
+      types: 'Vue | JavaScript | CSS',
+      img: './assets/img/stock2.jpg',
+      description: 'Stock-Dashboard provides real-time prices and key metrics for the worlds seven largest companies. Make informed decisions and optimize your investments with our user-friendly dashboard!',
+      ref: 'https://bastian-riedmann.developerakademie.net/stock/index.html',
+      github: 'https://github.com/BastianR188/vuejs-stock-dashboard',
     },
     {
       title: 'Sharkie',
