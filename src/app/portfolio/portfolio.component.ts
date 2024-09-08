@@ -22,7 +22,7 @@ export class PortfolioComponent {
       types: 'Angular | Firebase | TypeScript | SCSS',
       img: './assets/img/dabubble2.jpg',
       description: 'DABubble is a versatile chat application powered by Firebase. Sign in effortlessly, even with your Google account, and dive into interactive conversations. Create and join channels, invite users, chat publicly or privately, and start threads. DABubble offers a seamless, intuitive chatting experience tailored to your communication needs.',
-      ref: '',
+      ref: 'https://bastian-riedmann.developerakademie.net/dabubble/index.html',
       github: 'https://github.com/TobiasRuhmanseder/DABubble',
     },
     {
@@ -48,6 +48,14 @@ export class PortfolioComponent {
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help shakrie to find coins and poison bottles to fight against the killer whale.',
       ref: 'https://bastian-riedmann.developerakademie.net/Sharki/index.html',
       github: 'https://github.com/BastianR188/Sharki',
+    },
+    {
+      title: 'Memo-Flow',
+      types: 'Angular | Firebase | TypeScript | SCSS',
+      img: './assets/img/memoflow2.jpg',
+      description: 'Discover the Memo-Flow app, your perfect solution for creating simple notes and checklists. With the ability to upload images and effortlessly organize your thoughts, the app offers a user-friendly interface. Your data is automatically stored offline in the browser, while you also have the option to securely save everything in the cloud for easy access anytime. Make capturing your ideas easier and more flexible than ever before!',
+      ref: 'https://bastian-riedmann.developerakademie.net/memo-flow/index.html',
+      github: 'https://github.com/BastianR188/Memo-Flow',
     },
     {
       title: 'Simple-CRM',
