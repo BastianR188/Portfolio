@@ -14,7 +14,7 @@ export class PortfolioComponent {
 
 
 
-  projectsBtn = ['All', 'Angular', 'Vue', 'JavaScript'];
+  projectsBtn = ['All', 'Angular', 'React', 'Vue', 'JavaScript'];
 
   projects = [
     {
@@ -48,6 +48,14 @@ export class PortfolioComponent {
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help shakrie to find coins and poison bottles to fight against the killer whale.',
       ref: 'https://bastian-riedmann.developerakademie.net/Sharki/index.html',
       github: 'https://github.com/BastianR188/Sharki',
+    },
+    {
+      title: 'Hello-Weather',
+      types: 'React | JavaScript | CSS',
+      img: './assets/img/helloweather2.jpg',
+      description: 'Discover the weather anywhere in the world with the Hello-Weather app! Simply enter a location or coordinates to access real-time weather data and a comprehensive weekly forecast at your fingertips.',
+      ref: 'https://bastian-riedmann.developerakademie.net/hello-weather/index.html',
+      github: 'https://github.com/BastianR188/helloweather'
     },
     {
       title: 'Memo-Flow',
