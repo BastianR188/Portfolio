@@ -14,7 +14,7 @@ export class PortfolioComponent {
 
 
 
-  projectsBtn = ['All', 'Angular', 'Vue', 'JavaScript'];
+  projectsBtn = ['All', 'Angular', 'React', 'Vue', 'JavaScript'];
 
   projects = [
     {
@@ -22,15 +22,15 @@ export class PortfolioComponent {
       types: 'Angular | Firebase | TypeScript | SCSS',
       img: './assets/img/dabubble2.jpg',
       description: 'DABubble is a versatile chat application powered by Firebase. Sign in effortlessly, even with your Google account, and dive into interactive conversations. Create and join channels, invite users, chat publicly or privately, and start threads. DABubble offers a seamless, intuitive chatting experience tailored to your communication needs.',
-      ref: '',
-      github: 'https://github.com/TobiasRuhmanseder/DABubble',
+      ref: 'https://bastian-riedmann.de/bubble/index.html',
+      github: 'http://github.com/BastianR188/DABubble',
     },
     {
       title: 'Join',
       types: 'HTML | CSS | JavaScript',
       img: './assets/img/join2.png',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      ref: 'https://bastian-riedmann.developerakademie.net/join/index.html',
+      ref: 'https://bastian-riedmann.de/join/index.html',
       github: 'https://github.com/BastianR188/Join',
     },
     {
@@ -38,7 +38,7 @@ export class PortfolioComponent {
       types: 'Vue | JavaScript | CSS',
       img: './assets/img/stock2.jpg',
       description: 'Stock-Dashboard provides real-time prices and key metrics for the worlds seven largest companies. Make informed decisions and optimize your investments with our user-friendly dashboard!',
-      ref: 'https://bastian-riedmann.developerakademie.net/stock/index.html',
+      ref: 'https://bastian-riedmann.de/stock/index.html',
       github: 'https://github.com/BastianR188/vuejs-stock-dashboard',
     },
     {
@@ -46,17 +46,33 @@ export class PortfolioComponent {
       types: 'JavaScript | HTML | CSS',
       img: './assets/img/sharki2.jpg',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help shakrie to find coins and poison bottles to fight against the killer whale.',
-      ref: 'https://bastian-riedmann.developerakademie.net/Sharki/index.html',
+      ref: 'https://bastian-riedmann.de/sharki/index.html',
       github: 'https://github.com/BastianR188/Sharki',
     },
     {
-      title: 'Simple-CRM',
-      types: 'Angular | TypeScript | SCSS',
-      img: './assets/img/crm2.jpg',
-      description: 'A Simple Customer Relationship Management.',
-      ref: 'https://bastian-riedmann.developerakademie.net/simple-crm/index.html',
-      github: 'https://github.com/BastianR188/Simple-CRM',
+      title: 'Hello-Weather',
+      types: 'React | JavaScript | CSS',
+      img: './assets/img/helloweather2.jpg',
+      description: 'Discover the weather anywhere in the world with the Hello-Weather app! Simply enter a location or coordinates to access real-time weather data and a comprehensive weekly forecast at your fingertips.',
+      ref: 'https://bastian-riedmann.de/hello-weather/index.html',
+      github: 'https://github.com/BastianR188/helloweather'
     },
+    {
+      title: 'Memo-Flow',
+      types: 'Angular | Firebase | TypeScript | SCSS',
+      img: './assets/img/memoflow2.jpg',
+      description: 'Discover the Memo-Flow app, your perfect solution for creating simple notes and checklists. With the ability to upload images and effortlessly organize your thoughts, the app offers a user-friendly interface. Your data is automatically stored offline in the browser, while you also have the option to securely save everything in the cloud for easy access anytime. Make capturing your ideas easier and more flexible than ever before!',
+      ref: 'https://bastian-riedmann.de/memo-flow/index.html',
+      github: 'https://github.com/BastianR188/Memo-Flow',
+    },
+    // {
+    //   title: 'Simple-CRM',
+    //   types: 'Angular | TypeScript | SCSS',
+    //   img: './assets/img/crm2.jpg',
+    //   description: 'A Simple Customer Relationship Management.',
+    //   ref: 'https://bastian-riedmann.de/simple-crm/index.html',
+    //   github: 'https://github.com/BastianR188/Simple-CRM',
+    // },
     {
       title: 'Portfolio',
       types: 'Angular | TypeScript | SCSS',

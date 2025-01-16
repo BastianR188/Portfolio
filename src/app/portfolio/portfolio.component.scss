@@ -40,10 +40,12 @@
     z-index: 1;
   }
 }
+
 .portfolio-main-shadow-container {
   max-width: 1440px;
   position: relative;
 }
+
 .box-shadow {
   box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
 }
@@ -226,7 +228,8 @@
       color: white;
       font-size: 23px;
       font-weight: 400;
-transition: all 0.125s ease-in-out;
+      transition: all 0.125s ease-in-out;
+
       &:hover {
         background-color: #9747ff;
         border-color: #9747ff;
@@ -241,10 +244,11 @@ transition: all 0.125s ease-in-out;
 }
 
 @media (max-width: 1024px) {
-  .portfolio-title{
+  .portfolio-title {
     font-size: 45px !important;
     width: 190px !important;
   }
+
   .portfolio-project {
     flex-direction: column !important;
     margin: 0 25px 100px;
@@ -261,15 +265,17 @@ transition: all 0.125s ease-in-out;
   .portfolio-pro-container {
     align-items: center !important;
   }
-  .portfolio-main-shadow-container{
+
+  .portfolio-main-shadow-container {
     margin: unset;
     max-width: 100%;
   }
 
-  .portfolio-stroke-left{
+  .portfolio-stroke-left {
     right: 250px !important;
   }
-  .portfolio-stroke-right{
+
+  .portfolio-stroke-right {
     left: 250px !important;
   }
 }
@@ -296,13 +302,14 @@ transition: all 0.125s ease-in-out;
 }
 
 @media (max-width: 411px) {
-  .portfolio-pro-btn{
+  .portfolio-pro-btn {
     gap: 35px !important;
     white-space: nowrap;
   }
 }
+
 @media (max-width: 360px) {
-  .portfolio-pro-btn{
+  .portfolio-pro-btn {
     flex-direction: column;
   }
 }
