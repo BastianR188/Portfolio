@@ -20,12 +20,22 @@
           </div>
         </a>
       </div>
+      <div>
+        <div class="dropdown-menu"   name="language" id="lang" size="1">
+          <img class="language" (click)="toggleLang()" #toggleButton src="./assets/btn/{{lang}}.png" toggleButton alt="">
+          <div class="drop" *ngIf="isOpenLangMenu" #menu>
+            <div value="german" (click)="changeLang('de')"><img  class="language" src="./assets/btn/de.png" alt=""></div>
+            <div value="english" (click)="changeLang('en')"><img class="language" src="./assets/btn/en.png" alt=""></div>
+            <div value="norway" (click)="changeLang('no')"><img class="language" src="./assets/btn/no.png" alt=""></div>  
+          </div>
+        </div>
+      </div>
   </div>
   <div class="nav-btn" (click)="toggleWin()">
     <img *ngIf="!isExpanded" src="assets/btn/burger.png" />
     <img *ngIf="isExpanded" src="assets/btn/close.png" />
   </div>
   <div class="nav-window" id="nav_window">
-    <a *ngFor="let link of navLinks" (click)="toggleWin()" href="{{ link.href }}">{{ link.text }}</a>
+    <a *ngFor="let link of navLinks" (click)="toggleWin()" href="{{ link.href }}">{{ link.text[lang] }}</a>
   </div>
 </header>

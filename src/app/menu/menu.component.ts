@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,30 +8,52 @@ import { Router } from '@angular/router';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  constructor(private router: Router) { }
+  @Input() lang: string = 'de';
+  @ViewChild('toggleButton') toggleButton!: ElementRef;
+  @ViewChild('menu') menu!: ElementRef;
+  constructor(private router: Router, private renderer: Renderer2, private langService: LanguageService) {
+    this.renderer.listen('window', 'click', (e: Event) => {
+      if (this.isOpenLangMenu) {
+        if (e.target !== this.toggleButton.nativeElement && e.target !== this.menu.nativeElement) {
+          this.isOpenLangMenu = false;
+        }
+      }
+    });
+  }
   isExpanded = false;
+  isOpenLangMenu = false;
   navLinks = [
     {
       href: '#about-me',
-      text: 'About me',
+      text: { en: 'About me', de: 'Über mich', no: 'Om meg' },
       width: 'style="width: 99px;"',
     },
     {
       href: '#my-skills',
-      text: 'Skills',
+      text: { en: 'Skills', de: 'Fähigkeiten', no: 'Ferdigheter' },
       width: 'width: 54px;',
     },
     {
       href: '#portfolio',
-      text: 'Portfolio',
+      text: { en: 'Portfolio', de: 'Portfolio', no: 'Portefølje' },
       width: 'width: 85px;',
     },
     {
       href: '#contact',
-      text: 'Contact',
+      text: { en: 'Contact', de: 'Kontakt', no: 'Kontakt' },
       width: 'width: 91px;',
     },
   ]
+
+
+
+  changeLang(lang: string) {
+    this.langService.setLanguage(lang);
+  }
+
+  toggleLang() {
+    this.isOpenLangMenu = !this.isOpenLangMenu;
+  }
 
   toggleWin() {
     let navWindow: any = document.getElementById('nav_window');
@@ -45,7 +68,7 @@ export class MenuComponent {
   }
   openPage() {
 
-      this.router.navigateByUrl('');
-    
+    this.router.navigateByUrl('');
+
   }
 }
